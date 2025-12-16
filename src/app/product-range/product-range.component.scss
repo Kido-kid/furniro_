@@ -1,3 +1,5 @@
+@import "styles/main.scss";
+
 .product-range {
   padding: 4rem 2rem;
   max-width: 1200px;
@@ -9,15 +11,15 @@
     margin-bottom: 3rem;
   }
 
+
+
   &__title {
-    font-size: 2rem;
-    font-weight: 600;
+    @include font-text($font-primary,700,35px,$color-text-secondary);
     margin-bottom: 0.5rem;
   }
 
   &__description {
-    font-size: 1rem;
-    color: #666;
+    @include font-text($font-primary,400,20px,$color-text-light-dark)
   }
 
   /* GRID — IMAGES BELOW */
@@ -50,8 +52,8 @@
   }
 
   &__caption {
+    @include font-text($font-primary,600,24px,$color-text-secondary);
     margin-top: 1rem;
-    font-weight: 500;
   }
 
   /* RESPONSIVE */
