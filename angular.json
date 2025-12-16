@@ -26,6 +26,8 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/favicon.ico",
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
@@ -39,6 +41,9 @@
             "outputMode": "server",
             "ssr": {
               "entry": "src/server.ts"
+            },
+            "stylePreprocessorOptions": {
+                "includePaths": ["src"]
             }
           },
           "configurations": {
@@ -103,5 +108,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c82461dd-f1bc-45ea-b2ca-e5db4b425678"
   }
 }

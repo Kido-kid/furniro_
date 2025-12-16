@@ -1,0 +1,73 @@
+@import "styles/main.scss";
+
+.image-box {
+  width: 100%;
+  max-width: 100%;
+  height: 700.53px;                 /* important */
+  background-image: url("/assets/images/s_interior.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5rem;
+
+  display: flex;
+  justify-content: right;     /* RIGHT */
+  align-items: center;           /* CENTER vertically */
+
+  padding-right: 3rem;  
+  flex-wrap: wrap;  
+  
+  box-sizing: border-box;
+}
+
+.inner-box {
+  width: 600px;
+  height: 300px;
+  padding: 3rem;
+  background: $color-bg-secondary;
+  border-radius: 12px;
+
+  position: relative;
+  right: 10px;
+  
+display: flex;
+flex-direction: column;
+gap: 0.5rem;   
+
+  p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+
+  .inner-box__text-small{
+    @include poppins-medium;
+    font-size: 16px;
+
+  }
+  .inner-box__text-Large{
+    @include font-text("Poppins",700,52px,$color-text-highlight,65px);
+  }
+
+  .inner-box__text-Normal{
+    @include font-text("Poppins",500,18px,$color-text-secondary,24px);
+  }
+
+  .inner-box__button{
+    @include button-style($color-text-highlight,rgba(255, 255, 255, 1));
+    width: 200px;
+    height: 70px;
+    border: none;
+    margin-top: 20px;
+
+  }
+
+
+
+}
+
+
+
+

@@ -1,0 +1,54 @@
+@use "styles/main.scss";
+
+header{
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: row;
+    gap: 5%;
+    justify-content:space-between;
+    padding: 0 5%;
+    align-items: center;
+    margin-top: 20px;
+    height: 100px;
+
+    .header__main{
+        display:flex;
+        flex-direction: row;
+        gap: 5%;
+        justify-content:space-around;
+
+        .header__logo {
+            ALIGN-CONTENT: end;
+        }
+
+        img{
+            margin: 0;
+            width: 50px;
+            height: 32px;
+        }
+
+        .header__title{
+            @include main.montserrat-heading;
+            margin: 0;
+            color: rgb(0, 0, 1);
+        }
+
+    }
+
+    .header__Navigation{
+        display: flex;
+        align-items: baseline;    
+        gap: 5rem;
+        flex-wrap: wrap;
+
+        img{
+            width: 28px;
+            height: auto;
+        }
+    }
+
+    a {
+        @include main.font-text(main.$font-primary,500,16px,main.$color-text-dark);
+
+    }
+}
