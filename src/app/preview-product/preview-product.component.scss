@@ -1,4 +1,5 @@
 @import "styles/main.scss";
+
 .product-preview {
   padding: 4rem 2rem;
   background: rgba(252, 248, 243, 1);
@@ -24,7 +25,6 @@
     align-items: center;
     justify-content: center;
     
-   
 
     button{
         background-color:$color-bg-white;
@@ -44,6 +44,8 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  position: relative;
 
   &__figure {
     position: relative;
@@ -118,7 +120,41 @@
     &--current {
       font-weight: 600;
     }
+
+
   }
 
- 
+  :focus{
+    
+
+  }
 }
+
+.product-card:hover ,
+.product-card:focus-within  {
+  filter: blur(3px);
+  transition: filter 0.3s ease;
+}
+
+.product-card__overlay {
+  position: absolute;
+  inset: 0;                        // top:0 right:0 bottom:0 left:0
+  background: rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.product-card:hover .product-card__overlay,
+.product-card:focus-within .product-card__overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
